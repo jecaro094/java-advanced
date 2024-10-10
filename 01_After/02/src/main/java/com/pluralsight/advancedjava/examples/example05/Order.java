@@ -5,6 +5,7 @@
  */
 package com.pluralsight.advancedjava.examples.example05;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public record Order(long id, Customer customer, LocalDateTime dateTime, List<Ord
         checkThat(customer != null, "customer must not be null");
         checkThat(dateTime != null, "dateTime must not be null");
         checkThat(lines != null && !lines.isEmpty(), "lines must not be null or empty");
+
 
         // The canonical constructor must initialize all fields of the record.
         this.id = id;
